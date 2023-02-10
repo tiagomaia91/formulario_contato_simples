@@ -1,0 +1,47 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $nome = $_POST['nome'];
+  $sobrenome = $_POST['sobrenome'];
+  $telefone = $_POST['telefone'];
+  $nome_empresa = $_POST['nome_empresa'];
+  $motivo_contato = $_POST['motivo_contato'];
+  ?>;
+  <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Formulário de Contato</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center">Formulário de Contato</h1>
+      <form action="processar_form.php" method="post">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" class="form-control" id="nome" name="nome" required>
+        </div>
+        <div class="form-group">
+          <label for="sobrenome">Sobrenome:</label>
+          <input type="text" class="form-control" id="sobrenome" name="sobrenome" required>
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone:</label>
+          <input type="tel" class="form-control" id="telefone" name="telefone" required>
+        </div>
+        <div class="form-group">
+          <label for="nome_empresa">Nome da Empresa:</label>
+          <input type="text" class="form-control" id="nome_empresa" name="nome_empresa" required>
+        </div>
+        <div class="form-group">
+          <label for="motivo_contato">Motivo do Contato:</label>
+          <textarea class="form-control" id="motivo_contato" name="motivo_contato" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+  
